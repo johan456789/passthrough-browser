@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cleartext is required to talk to the host server (plain HTTP on the Waydroid bridge).
+     The host IP is discovered dynamically (default gateway), so it cannot be listed here
+     statically. The app has exactly one network code path (ServerClient), which only ever
+     connects to the discovered gateway after checking it is a private IPv4 address. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

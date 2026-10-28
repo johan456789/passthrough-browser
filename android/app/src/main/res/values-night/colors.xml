@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="status_yes">#81C784</color>
+    <color name="status_no">#EF9A9A</color>
+</resources>
