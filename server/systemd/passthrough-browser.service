@@ -1,0 +1,18 @@
+[Unit]
+Description=passthrough-browser: open Waydroid links in the host browser
+Documentation=https://github.com/johan456789/passthrough-browser
+After=graphical-session.target
+PartOf=graphical-session.target
+
+# Deliberately NO sandboxing directives (NoNewPrivileges, ProtectHome, PrivateTmp, ...):
+# the launched browser inherits them, which breaks Chromium/Flatpak sandboxes and
+# access to the user's browser profile.
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/passthrough-browser -addr 192.168.240.1 -port 7157
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
