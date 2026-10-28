@@ -1,0 +1,16 @@
+# Go
+/server/passthrough-browser
+# Android / Gradle
+android/.gradle/
+android/**/build/
+android/local.properties
+android/.kotlin/
+*.apk
+*.aab
+*.keystore
+*.jks
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
